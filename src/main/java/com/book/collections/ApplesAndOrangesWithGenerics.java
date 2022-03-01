@@ -11,7 +11,7 @@ public class ApplesAndOrangesWithGenerics {
       .forEach(i -> apples.add(new Apple(i, "red " + i)));
 
     for (Apple apple : apples) {
-      System.out.println(apple.name());
+      System.out.println(apple.getName());
     }
   }
 }
