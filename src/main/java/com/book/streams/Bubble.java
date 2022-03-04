@@ -1,9 +1,17 @@
 package com.book.streams;
 
-public class Buble {
+public class Bubble {
   private int id;
 
-  public Buble(int id) {
+  public Bubble(int id) {
+    this.id = id;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
     this.id = id;
   }
 
@@ -11,6 +19,7 @@ public class Buble {
   public String toString() {
     return "Buble [id=" + id + "]";
   }
+
 
   
 }
