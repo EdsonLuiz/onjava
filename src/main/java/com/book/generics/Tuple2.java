@@ -7,12 +7,12 @@ package com.book.generics;
  */
 public class Tuple2<A, B> {
   public final A a1;
-  public final B b1;
+  public final B a2;
 
-  public Tuple2(A a, B b) {a1 = a; b1 = b;}
+  public Tuple2(A a, B b) {a1 = a; a2 = b;}
 
   public String rep() {
-    return a1 + ", " + b1;
+    return a1 + ", " + a2;
   }
 
   @Override
