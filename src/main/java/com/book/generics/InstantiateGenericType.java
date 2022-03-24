@@ -35,9 +35,7 @@ class ClassAsFactory<T> implements Supplier<T> {
 }
 
 class Employee {
-
   public Employee() {}
-
   @Override public String toString() {
     return "Employee";
   }
