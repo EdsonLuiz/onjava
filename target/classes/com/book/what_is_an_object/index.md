@@ -1,0 +1,12 @@
+# What is an Object?
+
+## The Hidden Implementation
+We can divite into **class creators** (those who create new data types) and **client programmers** (the class consumers who use the data types in their applications).  
+- Client programmer: collect a toolbox full of classes to use for rapid application development.
+- Class creator: build a class that exposes only what`s necessary to the client programmer and keeps everything else hidden.  
+
+JAVA has three explicity keywords to set the boundaries in a class:  
+- *public:* the element is available to everyone.
+- *private:* no one can access that element except you, the creator of the type.
+- *protected:* like *private*, with the exception that an inheriting class may access *protected* members , but no *private* members.  
+
