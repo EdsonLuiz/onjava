@@ -20,3 +20,34 @@ classDiagram
 ```  
 
 The member objects of your new class are typically private, making them inaccessible to *client programmers* who use this class, changes in this members doesn't disturb existing client code. Inheritance doesn't you to change behavior of pragram at runtime, the compiler must place compile-time restrictions on classes created using inheritance.
+
+## Inheritance
+Clone a exepecific class and make additions and modifications to the clone, but if the original class is changed, the modified  "clone" also reflects those changes.  
+
+```mermaid
+classDiagram
+direction LR
+Base <|-- Derived
+```
+
+Shape example. The type hierarchy embodies both the similarities and differences between the shapes.
+
+```mermaid
+classDiagram
+direction TB
+class Shape{
+    draw()
+    erase()
+    move()
+    getColor()
+    setColor()
+}
+
+Shape <|-- Circle
+Shape <|-- Square
+Shape <|-- Triangle
+```
+
+There are two ways to differentiate your new derived class from the original base class.
+- Add new methods to the derived class.
+- Change the behavior of an existing base-class method.
