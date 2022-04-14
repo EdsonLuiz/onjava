@@ -50,4 +50,53 @@ Shape <|-- Triangle
 
 There are two ways to differentiate your new derived class from the original base class.
 - Add new methods to the derived class.
+    ```mermaid
+    classDiagram
+    direction TB
+    class Shape{
+        draw()
+        erase()
+        move()
+        getColor()
+        setColor()
+    }
+
+    class Triangle {
+        FlipVertical()
+        FlipHorizontal()
+    }
+
+    Shape <|-- Circle
+    Shape <|-- Square
+    Shape <|-- Triangle
+    ```
 - Change the behavior of an existing base-class method.
+    ```mermaid
+    classDiagram
+    direction TB
+    class Shape{
+        draw()
+        erase()
+        move()
+        getColor()
+        setColor()
+    }
+
+    class Triangle {
+        draw()
+        erase()
+    }
+
+    class Square {
+        draw()
+        erase()
+    }
+
+    class Circle {
+        draw()
+        erase()
+    }
+    Shape <|-- Circle
+    Shape <|-- Square
+    Shape <|-- Triangle
+    ```
