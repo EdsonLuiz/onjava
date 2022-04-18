@@ -100,3 +100,34 @@ There are two ways to differentiate your new derived class from the original bas
     Shape <|-- Square
     Shape <|-- Triangle
     ```
+
+## Is-a vs. Is-Like-a Relationships
+Should inheritance override **only** base-class methods? Derived class should be **exactly** the same type as the base class because it has exactly the same interface. This can be thought of a **pure substitution**, and it's often called the **substitution principle**. This is the ideal way to treat inheritance.  
+We can say *"A circle is a shape"*. A test for inheritance is to see if the is-a relationship makes sense for your classes.  
+Add new interface elements to a derived type, the new type can still substitute for the base type, this substitution isn't perfect bebause your new methods are not accessible from the base type. This is described as an **is-like-a**. The new type has the interface of the old type but also contains other methods, so you can't say it's exactly the same.  
+```mermaid
+classDiagram
+direction LR
+class Thermostat {
+    lower Temperature()
+}
+
+class Cooling System {
+    cool()
+}
+
+class Air Conditioner {
+    cool()
+}
+
+class Heat Pump {
+    cool()
+    heat()
+}
+
+Thermostat -- Cooling System : controls
+Cooling System <|-- Air Conditioner
+Cooling System <|-- Heat Pump
+```  
+
+Is clear that the base class **cooling system** is not general enough, and should be renamend to *"temperature control system"* so it can also include heating.
