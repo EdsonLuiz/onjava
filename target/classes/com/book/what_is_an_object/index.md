@@ -130,4 +130,9 @@ Cooling System <|-- Air Conditioner
 Cooling System <|-- Heat Pump
 ```  
 
-Is clear that the base class **cooling system** is not general enough, and should be renamend to *"temperature control system"* so it can also include heating.
+Is clear that the base class **cooling system** is not general enough, and should be renamend to *"temperature control system"* so it can also include heating.  
+
+## Interchangeable Objects with Polymorphism
+In type hierarchies treat an object as its base type, this way you can write code that doesn't depend on specific types. Such code is unaffected by the addition of new types, and this is a common way to extend an OOP program to handle new situations.  
+Easily extend a design by deriving new subtipes is one of essential ways to encapsulate chage.  
+There's a problem when attempting to treat derived-type objects as their generic base types, the compiler cannot know at compile time precisely what piece of code is executed.
