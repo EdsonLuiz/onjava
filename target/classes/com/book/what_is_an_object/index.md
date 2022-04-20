@@ -135,4 +135,44 @@ Is clear that the base class **cooling system** is not general enough, and shoul
 ## Interchangeable Objects with Polymorphism
 In type hierarchies treat an object as its base type, this way you can write code that doesn't depend on specific types. Such code is unaffected by the addition of new types, and this is a common way to extend an OOP program to handle new situations.  
 Easily extend a design by deriving new subtipes is one of essential ways to encapsulate chage.  
-There's a problem when attempting to treat derived-type objects as their generic base types, the compiler cannot know at compile time precisely what piece of code is executed.
+There's a problem when attempting to treat derived-type objects as their generic base types, the compiler cannot know at compile time precisely what piece of code is executed.  
+
+```mermaid
+classDiagram
+direction TB
+
+class BirdController {
+    Relocate()
+}
+
+class Bird {
+    move()
+}
+
+class Goose {
+    move()
+}
+
+class Penguin {
+    move()
+}
+
+BirdController -- Bird : What happens when move() is called?
+Bird <|-- Goose
+Bird <|-- Penguin
+```  
+
+In the diagran the *BirdController* object just works with generic *Bird* objects and does not know what exat type they are.  
+***Early binding:*** used in non-OOP compilers. The compiler generates a call to specific function name, which resolves to the absolute address of the code to be executed.  
+***Late binding:*** used in OOP compilers. When send a message to an object, the code called isn't determined until runtime. To perform *late binding*, JAVA uses a special bit of code.  
+
+We call the process of treating a derived type as though it where its base type *upcasting*. Thus, casting to a base type is moving up the inheritance diagran: ***"upcasting"***.  
+
+```mermaid
+classDiagram
+direction TB
+
+Shape <|-- Circle : up to
+Shape <|-- Square : up to
+Shape <|-- Triangle: up to
+```
