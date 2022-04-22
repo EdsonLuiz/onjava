@@ -175,4 +175,7 @@ direction TB
 Shape <|-- Circle : up to
 Shape <|-- Square : up to
 Shape <|-- Triangle: up to
-```
+```  
+
+## The Singly-Rooted Hierarchy
+All classes should by default be inherited from a single base class, and the name of this ultimate base class is ***Object***.
