@@ -179,3 +179,10 @@ Shape <|-- Triangle: up to
 
 ## The Singly-Rooted Hierarchy
 All classes should by default be inherited from a single base class, and the name of this ultimate base class is ***Object***.
+
+## Where Storage Lives
+1. ***Registers:*** Is the fatest storage exists inside the *CPU* The number of registers is very limited. You don't have direct control over register allocation.
+2. ***The stack:*** Lives in the *RAM* area, but has direct support from the *CPU* via its *stack pointer*. The *stack pointer* is moved down to create a new memory and moved up to release that memory. This is extremely fast and efficient way to allocate storage, scond only to registers.Object references living on *stack* while Java Objects are not placed on the *stack*. The Java system must know the exact lifetime of all items stored in the *stack*.
+3. ***The heap:*** Lives in the *RAM*, is a general-purpose pool of memory where **all Java Objects** live. The Java System don't need to know how long objects must stay in the *Heap*. Whenever you need an object, you write the code to create it using **new**, and the storage is allocated on the heap when that code is executed. *Heap* can take more time to allocate and clean up storate than *stack*.
+4. ***Constante storage:*** Placed directly in the program code, can be optionally placed in read-only memory *(ROM)* in embeded systems.
+5. ***Non-RAM storage:*** Data lives outside of program, it can exists while the program is not running. Examples are: *serialized objects* and *persintent objects.*
