@@ -1,4 +1,5 @@
 # Implementation hiding
+[back](../../../../../../README.md)
 
 ## Interface and Implementation
 Access control or **implementation hiding**. Wrapping data and methods within classes in combination with **implementation hiding** is called **encapsulation**. The final result is a data type with characteristics and behaviors.  
