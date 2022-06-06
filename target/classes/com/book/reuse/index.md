@@ -6,3 +6,9 @@
 ## composition  
 
 Simple place object references inside new classes.
+
+## Initializing the Base Class
+
+When you create an object of derived class, it contains within it a *subobject* of the base class. This subobject is the same as if you had created an object of the base class by itself. It's just that from the outside, the subobject of the base class is wrapped within the derived-class object.  
+
+It's essential that the base-class subobject be initialized correctly, and there's only one way to guarantee this: Perform the initialization in the constructor by calling the base-class constructor, which has all the apropriate knowledge and privileges to perform the base-class initialization.
