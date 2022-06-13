@@ -6,7 +6,7 @@ class Engine {
   public void stop() {}
 }
 
-class Whell {
+class Wheel {
   public void inflate(int psi) {}
 }
 
@@ -26,7 +26,7 @@ class Door {
  */
 public class Car {
   public Engine engine = new Engine();
-  public Whell[] whell = new Whell[4];
+  public Wheel[] wheel = new Wheel[4];
   public Door
     left = new Door(),
     right = new Door();
@@ -38,6 +38,6 @@ public class Car {
   public static void main(String[] args) {
     Car car = new Car();
     car.left.window.rolldown();
-    car.whell[0].inflate(72);
+    car.wheel[0].inflate(72);
   }
 }
