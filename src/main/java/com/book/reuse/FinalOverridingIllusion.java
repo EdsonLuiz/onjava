@@ -10,7 +10,7 @@ class WithFinals {
   }
 
   // Also automatically "final"
-  private final g() {
+  private final void g() {
     System.out.println("WithFinal.g()");
   }
 }
