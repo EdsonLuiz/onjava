@@ -13,6 +13,6 @@ public class Music {
 
   public static void main(String[] args) {
     Wind flute = new Wind();
-    tune.flute; //  upcasting
+    tune(flute); //  upcasting
   }
 }
