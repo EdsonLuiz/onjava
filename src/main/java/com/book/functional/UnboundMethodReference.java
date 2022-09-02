@@ -20,7 +20,7 @@ public class UnboundMethodReference {
     X x = new X();
 
     System.out.println(sp.transform(x));  // [2]
-    System.out.println(x.f());            // [3]
+    System.out.println(x.f());            // same effect
   }
 
   /*
@@ -28,7 +28,8 @@ public class UnboundMethodReference {
    *    You can't call f() without an X object to call it upon.
    *    X::f reprsents an unbound method reference, because it hasn't been "bound" to an object.
    * 
-   * [2] 
-   * [3]
+   * [2] Take an unbuound reference and call transform() on it, passinf it an X, and somehow that
+   *    results in the call to x.f().
+   *    Java knows it must take the first argument, effectively this, and call the method on it.
    */
 }
