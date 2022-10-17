@@ -18,4 +18,13 @@ public class Matching {
       )
     );
   }
+
+  public static void main(String[] args) {
+    show(Stream::allMatch, 10);
+    show(Stream::allMatch, 4);
+    show(Stream::anyMatch, 2);
+    show(Stream::anyMatch, 0);
+    show(Stream::noneMatch, 5);
+    show(Stream::noneMatch, 0);
+  }
 }
